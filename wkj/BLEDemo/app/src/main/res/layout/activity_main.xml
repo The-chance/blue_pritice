@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:text="打开蓝牙服务"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/open_BLE_btn"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/close_BLE_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:text="关闭蓝牙服务"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/open_BLE_btn"
+        app:layout_constraintVertical_bias="0" />
+
+    <TextView
+        android:text="等待打开蓝牙服务"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#FF0000"
+        android:id="@+id/progress_text_veiw"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/close_BLE_btn"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/close_BLE_btn"
+        app:layout_constraintTop_toBottomOf="@+id/progress_text_veiw"
+        app:layout_constraintEnd_toEndOf="@id/close_BLE_btn"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
