@@ -3,7 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/AndroidStudioProgects/BLEDemo/app/src/main/res/layout/activity_main.xml" value="0.1743659420289855" />
+        <entry key="..\:/AndroidStudioProgects/BLEDemo/app/src/main/res/layout/activity_choose_mode.xml" value="0.23143115942028986" />
+        <entry key="..\:/AndroidStudioProgects/BLEDemo/app/src/main/res/layout/activity_main.xml" value="0.26621847886098404" />
+        <entry key="..\:/AndroidStudioProgects/BLEDemo/app/src/main/res/layout/activity_service_mode.xml" value="0.23143115942028986" />
+        <entry key="..\:/AndroidStudioProgects/BLEDemo/app/src/main/res/layout/activity_success_connent.xml" value="0.22135416666666666" />
+        <entry key="..\:/AndroidStudioProgects/BLEDemo/app/src/main/res/layout/ble_device_recyclerview_item.xml" value="0.23143115942028986" />
+        <entry key="..\:/AndroidStudioProgects/BLEDemo/app/src/main/res/layout/message_from_client_recyclerview_item.xml" value="0.23143115942028986" />
         <entry key="..\:/AndroidStudioProgects/BLEDemo/app/src/main/res/layout/recyclerview_item_layout.xml" value="0.16802536231884058" />
       </map>
     </option>

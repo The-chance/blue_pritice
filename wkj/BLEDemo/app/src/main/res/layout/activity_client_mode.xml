@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ClientModeActivity">
+
+    <Button
+        android:text="扫描蓝牙信号"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/start_scan_btn"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/stop_scan_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:text="停止扫描"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/start_scan_btn"
+        app:layout_constraintVertical_bias="0" />
+
+    <TextView
+        android:text="等待扫描"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#FF0000"
+        android:id="@+id/progress_text_veiw"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/stop_scan_btn"/>
+    <TextView
+        android:id="@+id/old_device_text_view"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="已配对过的设备"
+        android:gravity="center"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/progress_text_veiw"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/old_device_recyclerview"
+        android:background="@color/teal_700"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        app:layout_constraintTop_toBottomOf="@+id/old_device_text_view"/>
+    <TextView
+        android:textColor="@color/black"
+        android:text="发现的新设备"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/new_device_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/old_device_recyclerview"
+        android:gravity="center"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:background="#F3B362"
+        android:id="@+id/new_device_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/new_device_text_view"
+        app:layout_constraintEnd_toEndOf="@id/stop_scan_btn"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
